@@ -1,0 +1,26 @@
+{
+  "name": "sockets-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon dist/",
+    "start:dev": "concurrently \"npm run tsc:w \" \"nodemon dist/index.js\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
