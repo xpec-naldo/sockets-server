@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import { demo } from './routes';
 import cors from 'cors';
 
-const server = new Server();
+const server = Server.instance; 
 
 /* Configurations
 -------------------------------------------------- */
@@ -11,8 +11,9 @@ const server = new Server();
 server.app.use( bodyParser.urlencoded({ extended: true }) );
 server.app.use( bodyParser.json() );
 
+
 /* Allow All conections */
-server.app.use( cors({ origin: true, credentials: true }) );
+server.app.use( cors({ origin: true, credentials: true  }) );
 
 /* End of Configurations
 -------------------------------------------------- */
@@ -21,7 +22,7 @@ server.app.use( cors({ origin: true, credentials: true }) );
 /* Routes
 -------------------------------------------------- */
 
-server.app.use('/api/demo', demo);   
+server.app.use('/', demo);   
 
 /* End of Routes
 -------------------------------------------------- */
